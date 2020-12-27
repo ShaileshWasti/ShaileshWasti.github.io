@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Shailesh  Wasti"
+title                    : "About"
 title_separator          : "-"
 name                     : &name "Shailesh Wasti"
 description              : &description "Research Assistant at UTC"
