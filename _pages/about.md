@@ -8,5 +8,5 @@ redirect_from:
   - /about.html
 ---
 
-I am a graduate student in the Department of Electrical Engineering at the [University of Tennessee at Chattanooga](https://www.utc.edu/). My research interest lies in the study of distributed algorithms, market design, control, and optimization of the power system, and the economics of power systems.
+I am a PhD candidate in the [Department of Energy and Mineral Engineering](https://www.eme.psu.edu/) at the [Pennsylvania State University](https://www.psu.edu/). 
 
