@@ -13,7 +13,7 @@ name                     : &name "Shailesh Wasti"
 description              : &description "Research Assistant at Penn State"
 url                      : https://ShaileshWasti.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "ShaileshWasti.github.io"
+repository               : "shaileshwasti.github.io"
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
 breadcrumbs              : false # true, false (default)
 words_per_minute         : 160
@@ -86,7 +86,7 @@ author:
   location         : "State College, PA"
   employer         :
  # pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
-  googlescholar    : "https://scholar.google.com/citations?user=mVaQlhcAAAAJ&hl=en&authuser=1&oi=ao#d=gs_hdr_drw"
+  googlescholar    : "https://scholar.google.com/citations?user=5ckMkHkAAAAJ&hl=en&oi=ao"
   email            :
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
