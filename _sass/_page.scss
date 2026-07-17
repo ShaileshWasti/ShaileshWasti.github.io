@@ -424,24 +424,26 @@
   }
 }
 
-/* News list: date on its own line, description below with a small gap */
 .news-list {
-  display: flex;
-  flex-direction: column;
-  gap: 15px; /* Spacing between rows */
-  margin: 0;
-  padding: 0;
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .news-row {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
+  display: flex; /* Enables the side-by-side columns */
+  margin-bottom: 15px; /* Space between rows */
+  align-items: flex-start;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .news-date {
+  min-width: 130px; /* Fixes width of the left column */
   font-weight: bold;
+  flex-shrink: 0; /* Prevents the date from squishing */
 }
 
 .text-red {
