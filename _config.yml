@@ -84,7 +84,8 @@ author:
   avatar           : "download.png"
   bio              : "PhD Student"
   location         : "State College, PA"
-  employer         : '<a href="https://www.psu.edu/">The Pennsylvania State University</a>'
+  employer         : "The Pennsylvania State University"
+  employer_url     : "https://www.psu.edu/"
  # pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   googlescholar    : "https://scholar.google.com/citations?user=5ckMkHkAAAAJ&hl=en&oi=ao"
   email            : "shailesh.wasti@gmail.com"

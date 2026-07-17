@@ -250,17 +250,6 @@
     color: $dark-gray;
   }
 
-  /* Non-link rows (location, employer) can still contain an inline link
-     inside their label — e.g. employer set to raw HTML like
-     '<a href="...">University</a>' — keep that inline instead of the
-     block-level treatment used for full-row links. */
-  li > .label a {
-    display: inline;
-    margin-bottom: 0;
-    padding: 0;
-    font-size: inherit;
-  }
-
   a {
     display: block;
     margin-bottom: 5px;
