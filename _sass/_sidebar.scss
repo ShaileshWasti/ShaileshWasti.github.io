@@ -218,7 +218,7 @@
 
     @include breakpoint($large) {
       margin: 0 0 10px;
-      font-size: $type-size-5;
+      font-size: 14px;
     }
 
     &:last-child {
@@ -263,7 +263,7 @@
 
     @include breakpoint($large) {
       margin-bottom: 0;
-      font-size: $type-size-5;
+      font-size: 14px;
     }
 
     &:hover {
