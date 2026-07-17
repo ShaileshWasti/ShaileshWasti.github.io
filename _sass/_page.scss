@@ -417,14 +417,14 @@
   background-color: #f9f9f9;
   border-radius: 4px;
   margin: 1em 0 2em;
-  font-size: 0.85em;
+  font-size: 0.75em;
 
   p {
     text-align: left;
   }
 }
 
-/* New Styles for Side-by-Side Layout */
+/* News list: date on its own line, description below with a small gap */
 .news-list {
   display: flex;
   flex-direction: column;
@@ -436,13 +436,12 @@
 
 .news-row {
   display: flex;
-  align-items: flex-start; /* Aligns text to the top */
+  flex-direction: column;
+  gap: 4px;
 }
 
 .news-date {
-  min-width: 110px;
   font-weight: bold;
-  white-space: nowrap;
 }
 
 .text-red {
