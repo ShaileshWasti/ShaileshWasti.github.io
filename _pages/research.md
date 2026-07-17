@@ -1,6 +1,6 @@
 ---
 permalink: /research/
-title: "Research"
+title: ""
 author_profile: true
 ---
 
@@ -14,7 +14,7 @@ The evolving resource mix increases net-load variability and short-term forecast
 
 For full documentation, see the Energy Market Simulation Framework (EMSF) repository <a href="https://github.com/PowerPSU/EMSF" title="EMSF on GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>, developed by a team in the Mort Webster group at Penn State (PowerPSU).
 
-### My Conference Paper
+### Publication
 
 <div class="pub-entry" markdown="1">
 
