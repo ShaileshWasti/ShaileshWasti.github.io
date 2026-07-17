@@ -50,9 +50,17 @@
 
 .page__content {
 
+  > h2:first-child {
+    margin-top: 0;
+  }
+
   h2 {
     padding-bottom: 0.5em;
     border-bottom: 1px solid $border-color;
+  }
+
+  h3, h4, h5, h6 {
+    font-weight: normal;
   }
 
   p, li, dl {
