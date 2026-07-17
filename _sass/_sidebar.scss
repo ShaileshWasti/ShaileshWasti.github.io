@@ -294,4 +294,45 @@
       border: 0 !important;
     }
   }
+
+  .icon-x {
+    width: 1em;
+    height: 1em;
+    fill: currentColor;
+    vertical-align: middle;
+
+    @include breakpoint($large) {
+      width: 15px;
+      height: 15px;
+    }
+  }
+
+  /*
+     Brand colors — authentic color at rest, filled brand color on hover
+     ========================================================================== */
+
+  $social-brands: (
+    "twitter":  #000000,
+    "linkedin": #0a66c2,
+    "github":   #181717,
+    "scholar":  #4285f4,
+    "orcid":    #a6ce39
+  );
+
+  @each $brand, $color in $social-brands {
+    .social-icons__link--#{$brand} {
+      color: $color;
+
+      @include breakpoint($large) {
+        background: mix(#fff, $color, 90%);
+        color: $color;
+
+        &:hover {
+          background: $color;
+          color: #fff;
+          box-shadow: 0 4px 10px rgba($color, 0.35);
+        }
+      }
+    }
+  }
 }
