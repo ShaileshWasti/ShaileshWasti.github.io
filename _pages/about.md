@@ -14,19 +14,17 @@ I am a PhD candidate in the [Department of Energy and Mineral Engineering](https
 
 <div class="news-scroll-box" markdown="1">
 
-<div class="news-row text-red">
-  <div class="news-date">November 2026:</div>
-  <div class="news-desc">Upcoming — Presenting <em>"Shortage Pricing for Energy Storage State-of-Charge Management in Real-Time Markets"</em> at the <a href="https://meetings.informs.org/wordpress/annual/">INFORMS Annual Meeting</a>, session: <em>Advances in Electricity Market Design and Operations</em>.</div>
-</div>
+<dl>
+  <dt><strong>November 2026:</strong></dt>
+  <dd>
+    <span class="text-red">Upcoming:</span> Presenting <em>"Shortage Pricing for Energy Storage State-of-Charge Management in Real-Time Markets"</em> at the <a href="https://meetings.informs.org/wordpress/annual/">INFORMS Annual Meeting</a>, session: <em>Advances in Electricity Market Design and Operations</em>.
+  </dd>
+  
+  <dt style="margin-top: 10px;"><strong>October 2025:</strong></dt>
+  <dd>Delivered invited talk at the EPRI ISO/RTO Emerging Technologies Market Modeling Working Group Meeting.</dd>
 
-<div class="news-row">
-  <div class="news-date">October 2025:</div>
-  <div class="news-desc">Delivered invited talk at the EPRI ISO/RTO Emerging Technologies Market Modeling Working Group Meeting.</div>
-</div>
-
-<div class="news-row">
-  <div class="news-date">July 2025:</div>
-  <div class="news-desc">Presented research on energy storage management at the IEEE Power & Energy Society General Meeting.</div>
-</div>
+  <dt style="margin-top: 10px;"><strong>July 2025:</strong></dt>
+  <dd>Presented research on energy storage management at the IEEE Power & Energy Society General Meeting.</dd>
+</dl>
 
 </div>
