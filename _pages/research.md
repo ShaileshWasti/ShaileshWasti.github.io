@@ -4,7 +4,7 @@ title: false
 author_profile: true
 ---
 
-## Real-Time Electricity Market Design
+## Electricity Market Design (Real-Time)
 
 The evolving resource mix increases net-load variability and short-term forecast uncertainty. System operators face the challenge of managing this cost-effectively and reliably within a merit-order-based market design. I study the management of storage, the incorporation of uncertainty into market simulation models, and the effects on price formation, with practical implications for RTOs/ISOs' operational and market design considerations — especially how merit-order-based dispatch fares when opportunity cost, rather than heat rate and fuel cost, drives price formation.
 
@@ -18,7 +18,7 @@ For full documentation, see the Energy Market Simulation Framework (EMSF) reposi
 
 <div class="pub-entry" markdown="1">
 
-Energy Storage State-of-Charge Management in Real-Time Markets
+**Energy Storage State-of-Charge Management in Real-Time Markets.**
 S. Wasti, A. Retna Kumar, S. Varghese, A. Giacomoni, and M. D. Webster
 *2025 IEEE Power & Energy Society General Meeting (PESGM)*, July 27–31, 2025
 
