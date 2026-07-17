@@ -82,7 +82,7 @@ analytics:
 author:
   name             : "Shailesh Wasti"
   avatar           : "download.png"
-  bio              : "Research Assistant at Penn State"
+  bio              : 'PhD Student, <a href="https://www.psu.edu/">The Pennsylvania State University</a>'
   location         : "State College, PA"
   employer         :
  # pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
