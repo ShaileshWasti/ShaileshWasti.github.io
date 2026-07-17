@@ -1,5 +1,6 @@
 ---
 permalink: /research/
+title: false
 author_profile: true
 ---
 
