@@ -1,0 +1,295 @@
+From 06c9e9bcdf24405a79427fae0920f50de325dabd Mon Sep 17 00:00:00 2001
+From: Shailesh Wasti <shailesh.wasti@gmail.com>
+Date: Thu, 16 Jul 2026 23:19:41 -0400
+Subject: [PATCH 1/3] Redesign author profile: circular icon links, cleaner
+ meta line, fix LinkedIn URL bug
+
+---
+ _includes/author-profile.html | 72 +++++++++++++++---------------
+ _sass/_sidebar.scss           | 82 ++++++++++++++++++++++++++++++-----
+ 2 files changed, 107 insertions(+), 47 deletions(-)
+
+diff --git a/_includes/author-profile.html b/_includes/author-profile.html
+index 5544916..f0ae365 100644
+--- a/_includes/author-profile.html
++++ b/_includes/author-profile.html
+@@ -17,106 +17,106 @@
+   <div class="author__content">
+     <h3 class="author__name">{{ author.name }}</h3>
+     {% if author.bio %}<p class="author__bio">{{ author.bio }}</p>{% endif %}
++    {% if author.location or author.employer %}
++      <p class="author__meta">
++        <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i>
++        {% if author.location %}{{ author.location }}{% endif %}{% if author.location and author.employer %} &middot; {% endif %}{% if author.employer %}{{ author.employer }}{% endif %}
++      </p>
++    {% endif %}
+   </div>
+ 
+   <div class="author__urls-wrapper">
+     <button class="btn btn--inverse">Follow</button>
+     <ul class="author__urls social-icons">
+-      {% if author.location %}
+-        <li><i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> {{ author.location }}</li>
+-      {% endif %}
+-      {% if author.employer %}
+-        <li><i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> {{ author.employer }}</li>
+-      {% endif %}
+       {% if author.uri %}
+-        <li><a href="{{ author.uri }}"><i class="fas fa-fw fa-link" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].website_label | default: "Website" }}</a></li>
++        <li><a href="{{ author.uri }}" title="{{ site.data.ui-text[site.locale].website_label | default: "Website" }}"><i class="fas fa-fw fa-link" aria-hidden="true"></i><span class="label">{{ site.data.ui-text[site.locale].website_label | default: "Website" }}</span></a></li>
+       {% endif %}
+       {% if author.email %}
+-        <li><a href="mailto:{{ author.email }}"><i class="fas fa-fw fa-envelope" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].email_label | default: "Email" }}</a></li>
++        <li><a href="mailto:{{ author.email }}" title="{{ site.data.ui-text[site.locale].email_label | default: "Email" }}"><i class="fas fa-fw fa-envelope" aria-hidden="true"></i><span class="label">{{ site.data.ui-text[site.locale].email_label | default: "Email" }}</span></a></li>
+       {% endif %}
+       {% if author.keybase %}
+-        <li><a href="https://keybase.io/{{ author.keybase }}"><i class="fas fa-fw fa-key" aria-hidden="true"></i> Keybase</a></li>
++        <li><a href="https://keybase.io/{{ author.keybase }}" title="Keybase"><i class="fas fa-fw fa-key" aria-hidden="true"></i><span class="label">Keybase</span></a></li>
+       {% endif %}
+        {% if author.researchgate %}
+-        <li><a href="{{ author.researchgate }}"><i class="fab fa-fw fa-researchgate" aria-hidden="true"></i> ResearchGate</a></li>
++        <li><a href="{{ author.researchgate }}" title="ResearchGate"><i class="fab fa-fw fa-researchgate" aria-hidden="true"></i><span class="label">ResearchGate</span></a></li>
+       {% endif %}
+       {% if author.twitter %}
+-        <li><a href="https://twitter.com/{{ author.twitter }}"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
++        <li><a href="https://twitter.com/{{ author.twitter }}" title="Twitter"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i><span class="label">Twitter</span></a></li>
+       {% endif %}
+       {% if author.facebook %}
+-        <li><a href="https://www.facebook.com/{{ author.facebook }}"><i class="fab fa-fw fa-facebook-square" aria-hidden="true"></i> Facebook</a></li>
++        <li><a href="https://www.facebook.com/{{ author.facebook }}" title="Facebook"><i class="fab fa-fw fa-facebook-square" aria-hidden="true"></i><span class="label">Facebook</span></a></li>
+       {% endif %}
+       {% if author.google_plus %}
+-        <li><a href="https://plus.google.com/+{{ author.google_plus }}"><i class="fab fa-fw fa-google-plus" aria-hidden="true"></i> Google+</a></li>
++        <li><a href="https://plus.google.com/+{{ author.google_plus }}" title="Google+"><i class="fab fa-fw fa-google-plus" aria-hidden="true"></i><span class="label">Google+</span></a></li>
+       {% endif %}
+       {% if author.linkedin %}
+-        <li><a href="https://www.linkedin.com/in/{{ author.linkedin }}"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
++        <li><a href="{{ author.linkedin }}" title="LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span class="label">LinkedIn</span></a></li>
+       {% endif %}
+       {% if author.xing %}
+-        <li><a href="https://www.xing.com/profile/{{ author.xing }}"><i class="fab fa-fw fa-xing-square" aria-hidden="true"></i> XING</a></li>
++        <li><a href="https://www.xing.com/profile/{{ author.xing }}" title="XING"><i class="fab fa-fw fa-xing-square" aria-hidden="true"></i><span class="label">XING</span></a></li>
+       {% endif %}
+       {% if author.instagram %}
+-        <li><a href="https://instagram.com/{{ author.instagram }}"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i> Instagram</a></li>
++        <li><a href="https://instagram.com/{{ author.instagram }}" title="Instagram"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i><span class="label">Instagram</span></a></li>
+       {% endif %}
+       {% if author.tumblr %}
+-        <li><a href="https://{{ author.tumblr }}.tumblr.com"><i class="fab fa-fw fa-tumblr-square" aria-hidden="true"></i> Tumblr</a></li>
++        <li><a href="https://{{ author.tumblr }}.tumblr.com" title="Tumblr"><i class="fab fa-fw fa-tumblr-square" aria-hidden="true"></i><span class="label">Tumblr</span></a></li>
+       {% endif %}
+       {% if author.bitbucket %}
+-        <li><a href="https://bitbucket.org/{{ author.bitbucket }}"><i class="fab fa-fw fa-bitbucket" aria-hidden="true"></i> Bitbucket</a></li>
++        <li><a href="https://bitbucket.org/{{ author.bitbucket }}" title="Bitbucket"><i class="fab fa-fw fa-bitbucket" aria-hidden="true"></i><span class="label">Bitbucket</span></a></li>
+       {% endif %}
+       {% if author.github %}
+-        <li><a href="https://github.com/{{ author.github }}"><i class="fab fa-fw fa-github" aria-hidden="true"></i> Github</a></li>
++        <li><a href="https://github.com/{{ author.github }}" title="Github"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">Github</span></a></li>
+       {% endif %}
+       {% if author.stackoverflow %}
+-        <li><a href="https://www.stackoverflow.com/users/{{ author.stackoverflow }}"><i class="fab fa-fw fa-stack-overflow" aria-hidden="true"></i> Stackoverflow</a></li>
++        <li><a href="https://www.stackoverflow.com/users/{{ author.stackoverflow }}" title="Stackoverflow"><i class="fab fa-fw fa-stack-overflow" aria-hidden="true"></i><span class="label">Stackoverflow</span></a></li>
+       {% endif %}
+       {% if author.lastfm %}
+-        <li><a href="https://lastfm.com/user/{{ author.lastfm }}"><i class="fab fa-fw fa-lastfm-square" aria-hidden="true"></i> Last.fm</a></li>
++        <li><a href="https://lastfm.com/user/{{ author.lastfm }}" title="Last.fm"><i class="fab fa-fw fa-lastfm-square" aria-hidden="true"></i><span class="label">Last.fm</span></a></li>
+       {% endif %}
+       {% if author.dribbble %}
+-        <li><a href="https://dribbble.com/{{ author.dribbble }}"><i class="fab fa-fw fa-dribbble-square" aria-hidden="true"></i> Dribbble</a></li>
++        <li><a href="https://dribbble.com/{{ author.dribbble }}" title="Dribbble"><i class="fab fa-fw fa-dribbble-square" aria-hidden="true"></i><span class="label">Dribbble</span></a></li>
+       {% endif %}
+       {% if author.pinterest %}
+-        <li><a href="https://www.pinterest.com/{{ author.pinterest }}"><i class="fab fa-fw fa-pinterest" aria-hidden="true"></i> Pinterest</a></li>
++        <li><a href="https://www.pinterest.com/{{ author.pinterest }}" title="Pinterest"><i class="fab fa-fw fa-pinterest" aria-hidden="true"></i><span class="label">Pinterest</span></a></li>
+       {% endif %}
+       {% if author.foursquare %}
+-        <li><a href="https://foursquare.com/{{ author.foursquare }}"><i class="fab fa-fw fa-foursquare" aria-hidden="true"></i> Foursquare</a></li>
++        <li><a href="https://foursquare.com/{{ author.foursquare }}" title="Foursquare"><i class="fab fa-fw fa-foursquare" aria-hidden="true"></i><span class="label">Foursquare</span></a></li>
+       {% endif %}
+       {% if author.steam %}
+-        <li><a href="https://steamcommunity.com/id/{{ author.steam }}"><i class="fab fa-fw fa-steam-square" aria-hidden="true"></i> Steam</a></li>
++        <li><a href="https://steamcommunity.com/id/{{ author.steam }}" title="Steam"><i class="fab fa-fw fa-steam-square" aria-hidden="true"></i><span class="label">Steam</span></a></li>
+       {% endif %}
+       {% if author.youtube %}
+-        <li><a href="https://www.youtube.com/user/{{ author.youtube }}"><i class="fab fa-fw fa-youtube" aria-hidden="true"></i> YouTube</a></li>
++        <li><a href="https://www.youtube.com/user/{{ author.youtube }}" title="YouTube"><i class="fab fa-fw fa-youtube" aria-hidden="true"></i><span class="label">YouTube</span></a></li>
+       {% endif %}
+       {% if author.soundcloud %}
+-        <li><a href="https://soundcloud.com/{{ author.soundcloud }}"><i class="fab fa-fw fa-soundcloud" aria-hidden="true"></i> Soundcloud</a></li>
++        <li><a href="https://soundcloud.com/{{ author.soundcloud }}" title="Soundcloud"><i class="fab fa-fw fa-soundcloud" aria-hidden="true"></i><span class="label">Soundcloud</span></a></li>
+       {% endif %}
+       {% if author.weibo %}
+-        <li><a href="https://www.weibo.com/{{ author.weibo }}"><i class="fab fa-fw fa-weibo" aria-hidden="true"></i> Weibo</a></li>
++        <li><a href="https://www.weibo.com/{{ author.weibo }}" title="Weibo"><i class="fab fa-fw fa-weibo" aria-hidden="true"></i><span class="label">Weibo</span></a></li>
+       {% endif %}
+       {% if author.flickr %}
+-        <li><a href="https://www.flickr.com/{{ author.flickr }}"><i class="fab fa-fw fa-flickr" aria-hidden="true"></i> Flickr</a></li>
++        <li><a href="https://www.flickr.com/{{ author.flickr }}" title="Flickr"><i class="fab fa-fw fa-flickr" aria-hidden="true"></i><span class="label">Flickr</span></a></li>
+       {% endif %}
+       {% if author.codepen %}
+-        <li><a href="https://codepen.io/{{ author.codepen }}"><i class="fab fa-fw fa-codepen" aria-hidden="true"></i> CodePen</a></li>
++        <li><a href="https://codepen.io/{{ author.codepen }}" title="CodePen"><i class="fab fa-fw fa-codepen" aria-hidden="true"></i><span class="label">CodePen</span></a></li>
+       {% endif %}
+       {% if author.vine %}
+-        <li><a href="https://vine.co/u/{{ author.vine }}"><i class="fab fa-fw fa-vine" aria-hidden="true"></i> Vine</a></li>
++        <li><a href="https://vine.co/u/{{ author.vine }}" title="Vine"><i class="fab fa-fw fa-vine" aria-hidden="true"></i><span class="label">Vine</span></a></li>
+       {% endif %}
+       {% if author.googlescholar %}
+-        <li><a href="{{ author.googlescholar }}"><i class="fas fa-fw fa-graduation-cap"></i> Google Scholar</a></li>
++        <li><a href="{{ author.googlescholar }}" title="Google Scholar"><i class="fas fa-fw fa-graduation-cap" aria-hidden="true"></i><span class="label">Google Scholar</span></a></li>
+       {% endif %}
+       {% if author.pubmed %}
+-        <li><a href="{{ author.pubmed }}"><i class="ai ai-pubmed-square ai-fw"></i> PubMed</a></li>
++        <li><a href="{{ author.pubmed }}" title="PubMed"><i class="ai ai-pubmed-square ai-fw" aria-hidden="true"></i><span class="label">PubMed</span></a></li>
+       {% endif %}
+       {% if author.orcid %}
+-        <li><a href="{{ author.orcid }}"><i class="ai ai-orcid-square ai-fw"></i> ORCID</a></li>
++        <li><a href="{{ author.orcid }}" title="ORCID"><i class="ai ai-orcid-square ai-fw" aria-hidden="true"></i><span class="label">ORCID</span></a></li>
+       {% endif %}
+       {% if author.impactstory %}
+-        <li><a href="{{ author.impactstory }}"><i class="ai ai-impactstory ai-fw"></i> Impactstory</a></li>
++        <li><a href="{{ author.impactstory }}" title="Impactstory"><i class="ai ai-impactstory ai-fw" aria-hidden="true"></i><span class="label">Impactstory</span></a></li>
+       {% endif %}
+       {% if author.wikipedia %}
+-        <li><a href="https://en.wikipedia.org/wiki/User:{{ author.wikipedia }}"><i class="fab fa-fw fa-wikipedia-w" aria-hidden="true"></i> Wikipedia</a></li>
++        <li><a href="https://en.wikipedia.org/wiki/User:{{ author.wikipedia }}" title="Wikipedia"><i class="fab fa-fw fa-wikipedia-w" aria-hidden="true"></i><span class="label">Wikipedia</span></a></li>
+ {% endif %}
+     </ul>
+   </div>
+diff --git a/_sass/_sidebar.scss b/_sass/_sidebar.scss
+index 8926135..72fce12 100644
+--- a/_sass/_sidebar.scss
++++ b/_sass/_sidebar.scss
+@@ -85,10 +85,13 @@
+   img {
+     max-width: 175px;
+     border-radius: 50%;
++    -webkit-transition: box-shadow 0.2s ease-in-out;
++            transition: box-shadow 0.2s ease-in-out;
+ 
+     @include breakpoint($large) {
+-      padding: 5px;
++      padding: 4px;
+       border: 1px solid $border-color;
++      box-shadow: 0 2px 10px rgba(#000, 0.06);
+     }
+   }
+ }
+@@ -126,7 +129,18 @@
+ 
+   @include breakpoint($large) {
+     margin-top: 10px;
+-    margin-bottom: 20px;
++    margin-bottom: 12px;
++  }
++}
++
++.author__meta {
++  margin: 0 0 16px;
++  color: mix(#fff, $gray, 25%);
++  font-size: $type-size-6;
++
++  i {
++    margin-right: 4px;
++    opacity: 0.7;
+   }
+ }
+ 
+@@ -139,12 +153,6 @@
+   position: relative;
+   cursor: pointer;
+ 
+-  li:last-child {
+-    a {
+-      margin-bottom: 0;
+-    }
+-  }
+-
+   @include breakpoint($large) {
+     display: block;
+   }
+@@ -169,13 +177,17 @@
+   border-radius: $border-radius;
+   background: #fff;
+   z-index: -1;
+-  box-shadow: 0 0 10px rgba(#000, 0.25);
++  box-shadow: 0 4px 20px rgba(#000, 0.12);
+   cursor: default;
+ 
+   @include breakpoint($large) {
+-    display: block;
++    display: -webkit-box;
++    display: -ms-flexbox;
++    display: flex;
++    -ms-flex-wrap: wrap;
++        flex-wrap: wrap;
+     position: relative;
+-    margin: 0;
++    margin: 0 -4px;
+     padding: 0;
+     border: 0;
+     background: transparent;
+@@ -218,6 +230,10 @@
+ 
+   li {
+     white-space: nowrap;
++
++    @include breakpoint($large) {
++      margin: 4px;
++    }
+   }
+ 
+   a {
+@@ -233,5 +249,49 @@
+     &:hover {
+       text-decoration: underline;
+     }
++
++    @include breakpoint($large) {
++      display: -webkit-box;
++      display: -ms-flexbox;
++      display: flex;
++      -webkit-box-align: center;
++          -ms-flex-align: center;
++              align-items: center;
++      -webkit-box-pack: center;
++          -ms-flex-pack: center;
++              justify-content: center;
++      width: 36px;
++      height: 36px;
++      margin-bottom: 0;
++      padding: 0;
++      border-radius: 50%;
++      background: $lighter-gray;
++      color: $gray;
++      font-size: 15px;
++      -webkit-transition: all 0.2s ease-in-out;
++              transition: all 0.2s ease-in-out;
++
++      &:hover {
++        -webkit-transform: translateY(-2px);
++            -ms-transform: translateY(-2px);
++                transform: translateY(-2px);
++        background: $primary-color;
++        color: #fff;
++        text-decoration: none;
++        box-shadow: 0 4px 10px rgba(#000, 0.15);
++      }
++    }
++  }
++
++  .label {
++    @include breakpoint($large) {
++      position: absolute !important;
++      width: 1px !important;
++      height: 1px !important;
++      overflow: hidden;
++      clip: rect(1px, 1px, 1px, 1px);
++      white-space: nowrap;
++      border: 0 !important;
++    }
+   }
+ }
+-- 
+2.34.1
+

@@ -1,0 +1,285 @@
+From a1f4021088877b2cbc959885264661bae08dd010 Mon Sep 17 00:00:00 2001
+From: Shailesh Wasti <shailesh.wasti@gmail.com>
+Date: Thu, 16 Jul 2026 23:35:53 -0400
+Subject: [PATCH 3/3] Replace Research tab with Updates page; simplify sidebar
+ icon list to clean vertical style
+
+---
+ _data/navigation.yml          |   4 +-
+ _includes/author-profile.html |  14 ++--
+ _pages/updates.md             |  21 +++++
+ _sass/_sidebar.scss           | 145 ++++++++++++----------------------
+ 4 files changed, 79 insertions(+), 105 deletions(-)
+ create mode 100644 _pages/updates.md
+
+diff --git a/_data/navigation.yml b/_data/navigation.yml
+index 9313307..a2b0c0b 100644
+--- a/_data/navigation.yml
++++ b/_data/navigation.yml
+@@ -1,4 +1,4 @@
+ # main links links
+ main:
+-  - title: "Research"
+-    url: /research/
++  - title: "Updates"
++    url: /updates/
+diff --git a/_includes/author-profile.html b/_includes/author-profile.html
+index db9047e..8416863 100644
+--- a/_includes/author-profile.html
++++ b/_includes/author-profile.html
+@@ -17,17 +17,17 @@
+   <div class="author__content">
+     <h3 class="author__name">{{ author.name }}</h3>
+     {% if author.bio %}<p class="author__bio">{{ author.bio }}</p>{% endif %}
+-    {% if author.location or author.employer %}
+-      <p class="author__meta">
+-        <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i>
+-        {% if author.location %}{{ author.location }}{% endif %}{% if author.location and author.employer %} &middot; {% endif %}{% if author.employer %}{{ author.employer }}{% endif %}
+-      </p>
+-    {% endif %}
+   </div>
+ 
+   <div class="author__urls-wrapper">
+     <button class="btn btn--inverse">Follow</button>
+     <ul class="author__urls social-icons">
++      {% if author.location %}
++        <li><i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i><span class="label">{{ author.location }}</span></li>
++      {% endif %}
++      {% if author.employer %}
++        <li><i class="fas fa-fw fa-university" aria-hidden="true"></i><span class="label">{{ author.employer }}</span></li>
++      {% endif %}
+       {% if author.uri %}
+         <li><a href="{{ author.uri }}" title="{{ site.data.ui-text[site.locale].website_label | default: "Website" }}"><i class="fas fa-fw fa-link" aria-hidden="true"></i><span class="label">{{ site.data.ui-text[site.locale].website_label | default: "Website" }}</span></a></li>
+       {% endif %}
+@@ -41,7 +41,7 @@
+         <li><a href="{{ author.researchgate }}" title="ResearchGate"><i class="fab fa-fw fa-researchgate" aria-hidden="true"></i><span class="label">ResearchGate</span></a></li>
+       {% endif %}
+       {% if author.twitter %}
+-        <li><a href="https://twitter.com/{{ author.twitter }}" title="X (Twitter)" class="social-icons__link--twitter"><svg class="icon-x" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg><span class="label">X (Twitter)</span></a></li>
++        <li><a href="https://twitter.com/{{ author.twitter }}" title="X (formerly Twitter)" class="social-icons__link--twitter"><svg class="icon-x" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg><span class="label">X (formerly Twitter)</span></a></li>
+       {% endif %}
+       {% if author.facebook %}
+         <li><a href="https://www.facebook.com/{{ author.facebook }}" title="Facebook"><i class="fab fa-fw fa-facebook-square" aria-hidden="true"></i><span class="label">Facebook</span></a></li>
+diff --git a/_pages/updates.md b/_pages/updates.md
+new file mode 100644
+index 0000000..6a6e351
+--- /dev/null
++++ b/_pages/updates.md
+@@ -0,0 +1,21 @@
++---
++permalink: /updates/
++title: "Updates"
++author_profile: true
++---
++
++A running log of talks, presentations, and other updates — newest first.
++
++#### Month Year
++Invited talk at **PESGM** — "Talk title goes here."
++
++#### Month Year
++Presented at **INFORMS** Annual Meeting — "Talk title goes here."
++
++#### Month Year
++Talk at **EPRI** — "Talk title goes here."
++
++<!--
++  Add new entries above this line, most recent first.
++  Format: #### Month Year, then a line of description below it.
++-->
+diff --git a/_sass/_sidebar.scss b/_sass/_sidebar.scss
+index 78515df..c924538 100644
+--- a/_sass/_sidebar.scss
++++ b/_sass/_sidebar.scss
+@@ -133,17 +133,6 @@
+   }
+ }
+ 
+-.author__meta {
+-  margin: 0 0 16px;
+-  color: mix(#fff, $gray, 25%);
+-  font-size: $type-size-6;
+-
+-  i {
+-    margin-right: 4px;
+-    opacity: 0.7;
+-  }
+-}
+-
+ .author__urls-wrapper {
+   position: relative;
+   display: table-cell;
+@@ -181,14 +170,10 @@
+   cursor: default;
+ 
+   @include breakpoint($large) {
+-    display: -webkit-box;
+-    display: -ms-flexbox;
+-    display: flex;
+-    -ms-flex-wrap: wrap;
+-        flex-wrap: wrap;
++    display: block;
+     position: relative;
+-    margin: 0 -4px;
+-    padding: 0;
++    margin: 0;
++    padding: 6px 0 0;
+     border: 0;
+     background: transparent;
+     box-shadow: none;
+@@ -232,106 +217,74 @@
+     white-space: nowrap;
+ 
+     @include breakpoint($large) {
+-      margin: 4px;
++      margin: 0 0 10px;
++    }
++
++    &:last-child {
++      @include breakpoint($large) {
++        margin-bottom: 0;
++      }
+     }
+   }
+ 
++  i,
++  .icon-x {
++    display: inline-block;
++    width: 1.25em;
++    margin-right: 6px;
++    text-align: center;
++    color: $gray;
++    vertical-align: middle;
++  }
++
++  .icon-x {
++    width: 1em;
++    height: 1em;
++    fill: currentColor;
++  }
++
++  a,
++  li > i {
++    color: $dark-gray;
++  }
++
+   a {
+     display: block;
+     margin-bottom: 5px;
+     padding-right: 5px;
+     padding-top: 2px;
+     padding-bottom: 2px;
+-    color: inherit;
+     font-size: $type-size-5;
+     text-decoration: none;
+-
+-    &:hover {
+-      text-decoration: underline;
+-    }
++    -webkit-transition: color 0.2s ease-in-out;
++            transition: color 0.2s ease-in-out;
+ 
+     @include breakpoint($large) {
+-      display: -webkit-box;
+-      display: -ms-flexbox;
+-      display: flex;
+-      -webkit-box-align: center;
+-          -ms-flex-align: center;
+-              align-items: center;
+-      -webkit-box-pack: center;
+-          -ms-flex-pack: center;
+-              justify-content: center;
+-      width: 36px;
+-      height: 36px;
+       margin-bottom: 0;
+-      padding: 0;
+-      border-radius: 50%;
+-      background: $lighter-gray;
+-      color: $gray;
+-      font-size: 15px;
+-      -webkit-transition: all 0.2s ease-in-out;
+-              transition: all 0.2s ease-in-out;
+-
+-      &:hover {
+-        -webkit-transform: translateY(-2px);
+-            -ms-transform: translateY(-2px);
+-                transform: translateY(-2px);
+-        background: $primary-color;
+-        color: #fff;
+-        text-decoration: none;
+-        box-shadow: 0 4px 10px rgba(#000, 0.15);
+-      }
+-    }
+-  }
+-
+-  .label {
+-    @include breakpoint($large) {
+-      position: absolute !important;
+-      width: 1px !important;
+-      height: 1px !important;
+-      overflow: hidden;
+-      clip: rect(1px, 1px, 1px, 1px);
+-      white-space: nowrap;
+-      border: 0 !important;
++      font-size: $type-size-6;
+     }
+-  }
+ 
+-  .icon-x {
+-    width: 1em;
+-    height: 1em;
+-    fill: currentColor;
+-    vertical-align: middle;
++    &:hover {
++      color: $primary-color;
++      text-decoration: none;
+ 
+-    @include breakpoint($large) {
+-      width: 15px;
+-      height: 15px;
++      i, .icon-x {
++        color: $primary-color;
++      }
+     }
+   }
+ 
+-  /*
+-     Brand colors — authentic color at rest, filled brand color on hover
+-     ========================================================================== */
+-
+-  $social-brands: (
+-    "twitter":  #000000,
+-    "linkedin": #0a66c2,
+-    "github":   #181717,
+-    "scholar":  #4285f4,
+-    "orcid":    #a6ce39
+-  );
++  /* ORCID keeps its brand green — everything else stays neutral for a clean, minimal look */
++  .social-icons__link--orcid {
++    i {
++      color: #a6ce39;
++    }
+ 
+-  @each $brand, $color in $social-brands {
+-    .social-icons__link--#{$brand} {
+-      color: $color;
++    &:hover {
++      color: #a6ce39;
+ 
+-      @include breakpoint($large) {
+-        background: mix(#fff, $color, 90%);
+-        color: $color;
+-
+-        &:hover {
+-          background: $color;
+-          color: #fff;
+-          box-shadow: 0 4px 10px rgba($color, 0.35);
+-        }
++      i {
++        color: #a6ce39;
+       }
+     }
+   }
+-- 
+2.34.1
+
