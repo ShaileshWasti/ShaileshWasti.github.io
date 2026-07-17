@@ -408,14 +408,14 @@
    News box (scrollable, dated list on the About page)
    ========================================================================== */
 
-.news-box {
-  max-height: 320px;
+.news-scroll-box {
+  height: 200px; /* Adjust height as needed */
   overflow-y: auto;
-  border: 1px solid $border-color;
-  border-radius: $border-radius;
-  padding: 0.25em 1.25em 1em;
+  border: 1px solid #e0e0e0;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 4px;
   margin: 1em 0 2em;
-  background: #fff;
 
   p {
     text-align: left;
@@ -431,16 +431,7 @@
   }
 }
 
-.news-tag {
-  display: inline-block;
-  background: #d9363e;
-  color: #fff;
-  font-size: 0.7em;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.03em;
-  padding: 2px 7px;
-  border-radius: 3px;
-  margin-right: 6px;
-  vertical-align: middle;
+.text-red {
+  color: #d9534f; /* Standard Bootstrap danger red */
+  font-weight: bold;
 }
