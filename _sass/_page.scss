@@ -403,3 +403,44 @@
   font-size: $type-size-6;
   text-transform: uppercase;
 }
+
+/*
+   News box (scrollable, dated list on the About page)
+   ========================================================================== */
+
+.news-box {
+  max-height: 320px;
+  overflow-y: auto;
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+  padding: 0.25em 1.25em 1em;
+  margin: 1em 0 2em;
+  background: #fff;
+
+  p {
+    text-align: left;
+  }
+
+  ul {
+    margin-top: 0;
+    margin-bottom: 1em;
+  }
+
+  li {
+    margin-bottom: 0.4em;
+  }
+}
+
+.news-tag {
+  display: inline-block;
+  background: #d9363e;
+  color: #fff;
+  font-size: 0.7em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  padding: 2px 7px;
+  border-radius: 3px;
+  margin-right: 6px;
+  vertical-align: middle;
+}
