@@ -41,3 +41,61 @@ S. Wasti, A. Retna Kumar, S. Varghese, A. Giacomoni, and M. D. Webster
 </details>
 
 </div>
+
+## Distributed Algorithms for Microgrids
+
+Microgrids with a high share of distributed energy resources (DER) — rooftop solar, storage, and flexible loads — require coordination among many small, privately-owned agents, where relying on a central coordinator to gather generation and demand data raises both privacy and scalability concerns. My earlier work used distributed optimization methods, building on the Alternating Direction Method of Multipliers (ADMM) and dynamic consensus algorithms, so that agents in a microgrid can jointly solve resource-allocation problems like economic dispatch by communicating only with their neighbors.
+
+### Publications
+
+<div class="pub-entry" markdown="1">
+
+**Distributed Dynamic Economic Dispatch using Alternating Direction Method of Multipliers.**
+S. Wasti, P. Ubiratan, S. Afshar, and V. Disfani
+*Applied Energy Symposium: MIT A+B (APEN-MIT)*, August 12–14, 2020
+
+<div class="pub-links">
+<a class="pub-btn" href="https://www.energy-proceedings.org/distributed-dynamic-economic-dispatch-using-alternating-direction-method-of-multipliers/" target="_blank" rel="noopener"><i class="fas fa-external-link-alt" aria-hidden="true"></i> Published</a>
+<a class="pub-btn" href="/files/papers/Wasti_APEN2020_DistributedED.pdf" target="_blank" rel="noopener"><i class="fas fa-file-pdf" aria-hidden="true"></i> PDF</a>
+</div>
+
+<details class="pub-toggle"><summary>ABS</summary>
+<p>With the proliferation of distributed energy resources and the volume of data stored due to advancement in metering infrastructure, energy management in power system operation needs distributed computing. In this paper, we propose a fully distributed Alternating Direction Method of Multipliers (ADMM) algorithm to solve the distributed economic dispatch (ED) problem, where the optimization problem is fully decomposed between participating agents. In our proposed framework, each agent estimates the dual variable and the average of the total power mismatch of the network using dynamic average consensus, which replaces the dual updater in the traditional ADMM with a distributed alternative. Unlike other distributed ADMM, the proposed method does not rely on any specific assumption and captures the real-time demand change. The algorithm is validated successfully via case studies for IEEE 30-bus and 300-bus test systems with the penetration of solar photovoltaic.</p>
+</details>
+
+<details class="pub-toggle"><summary>BIB</summary>
+<pre>@inproceedings{wasti2020distributed,
+  title={Distributed Dynamic Economic Dispatch using Alternating Direction Method of Multipliers},
+  author={Wasti, S. and Ubiratan, P. and Afshar, S. and Disfani, V.},
+  booktitle={Proceedings of Applied Energy Symposium: MIT A+B},
+  year={2020}
+}</pre>
+</details>
+
+</div>
+
+<div class="pub-entry" markdown="1">
+
+**Distributed Online Algorithms for Energy Management in Smart Grids.**
+S. Wasti
+*M.S. Thesis, University of Tennessee at Chattanooga*, December 2020
+
+<div class="pub-links">
+<a class="pub-btn" href="https://scholar.utc.edu/cgi/viewcontent.cgi?article=1845&context=theses" target="_blank" rel="noopener"><i class="fas fa-external-link-alt" aria-hidden="true"></i> Thesis</a>
+</div>
+
+<details class="pub-toggle"><summary>ABS</summary>
+<p>The 21st-century electric power grid is transitioning from a centralized structure designed for bulk-power transfer to a distributed paradigm that integrates the variable renewable energy (VRE) resources spatially distributed across the grid. This work proposes algorithmic solutions for distributed economic dispatch based on the Subgradient method and the Alternating Direction Method of Multipliers (ADMM), both designed to be agnostic to any initialization vector. The proposed distributed online solutions leverage a dynamic average consensus algorithm to track the time-variant, linearly coupled constraint that allows an abrupt change in power demand of the network because of the high penetration of VRE resources. The problems are modeled as discrete dynamic systems to investigate the stability and convergence of the algorithm. The update procedures are designed such that the iterates converge to the optimal solution of the original optimization problem, steered by the gain parameter corresponding to the second largest eigenvalue of the system matrix.</p>
+</details>
+
+<details class="pub-toggle"><summary>BIB</summary>
+<pre>@mastersthesis{wasti2020thesis,
+  title={Distributed Online Algorithms for Energy Management in Smart Grids},
+  author={Wasti, Shailesh},
+  school={University of Tennessee at Chattanooga},
+  year={2020},
+  month={December}
+}</pre>
+</details>
+
+</div>
