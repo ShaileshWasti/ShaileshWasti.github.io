@@ -99,3 +99,61 @@ S. Wasti
 </details>
 
 </div>
+
+## Power Systems and Power Electronics
+
+The increasing penetration of inverter-based and distributed resources is changing the physical behavior of the grid, from how it responds to disturbances to how energy is captured and converted at the hardware level. My early work explored this challenge from two angles: distributed control algorithms that help maintain system stability without relying on centralized, wide-area communication, and power-electronic converter topologies that improve energy capture and reliability, validated through simulation studies.
+
+### Publications
+
+<div class="pub-entry" markdown="1">
+
+**Distributed Inter-Area Oscillation Damping Control via Dynamic Average Consensus Algorithm.**
+P. Macedo, S. Wasti, and V. Disfani
+*2020 IEEE International Conference on Communications, Control, and Computing Technologies for Smart Grids (SmartGridComm)*, November 11–13, 2020, Tempe, AZ, USA
+
+<div class="pub-links">
+<a class="pub-btn" href="https://doi.org/10.1109/SmartGridComm47815.2020.9302945" target="_blank" rel="noopener"><i class="fas fa-external-link-alt" aria-hidden="true"></i> IEEE Xplore</a>
+</div>
+
+<details class="pub-toggle"><summary>ABS</summary>
+<p>Massive deployment of distributed energy resources (DER) through zero-inertia power electronic converters has made the power grid vulnerable to frequency instabilities and in particular inter-area oscillations. Low-frequency oscillations are of major concerns as they have the potential to limit maximum power transfer, and even cause blackouts. This paper presents a novel distributed control algorithm called distributed frequency deviation control (DFDC) based on local frequency deviation from the estimate of the average frequency of the network. The efficacy of the control unit is demonstrated via modal analyses and time-domain simulations. The results show that all the inter-area oscillation modes are damped for all the test cases without affecting the other dynamic modes of the system.</p>
+</details>
+
+<details class="pub-toggle"><summary>BIB</summary>
+<pre>@inproceedings{macedo2020distributed,
+  title={Distributed Inter-Area Oscillation Damping Control via Dynamic Average Consensus Algorithm},
+  author={Macedo, P. and Wasti, S. and Disfani, V.},
+  booktitle={2020 IEEE International Conference on Communications, Control, and Computing Technologies for Smart Grids (SmartGridComm)},
+  year={2020},
+  doi={10.1109/SmartGridComm47815.2020.9302945}
+}</pre>
+</details>
+
+</div>
+
+<div class="pub-entry" markdown="1">
+
+**MMC-Based Distributed Maximum Power Point Tracking for Photovoltaic Systems.**
+F. Mohamed, S. Wasti, S. Afshar, P. Macedo, and V. Disfani
+*2020 IEEE Power & Energy Society General Meeting (PESGM)*, August 2–6, 2020, Montreal, QC, Canada
+
+<div class="pub-links">
+<a class="pub-btn" href="https://doi.org/10.1109/PESGM41954.2020.9282015" target="_blank" rel="noopener"><i class="fas fa-external-link-alt" aria-hidden="true"></i> IEEE Xplore</a>
+</div>
+
+<details class="pub-toggle"><summary>ABS</summary>
+<p>This paper proposes a novel topology for grid connected photovoltaic (PV) system based on modular multilevel converter (MMC). In this topology, a PV array is connected to capacitors of each submodule (SM) of the MMC through a DC-DC boost converter with maximum power point tracking (MPPT) control. This topology will maximize the efficiency of the system in the case of partial shading conditions, as it can regulate the SM capacitor voltages independently from each other to realize distributed MPPT. A model predictive control is used to track the AC output current, balance the SMs capacitor voltages, and to mitigate the circulating current. The proposed PV generation topology with 7-level MMC system validity has been verified by simulations via MATLAB/Simulink toolbox under normal operation, partial shading and PV array failure.</p>
+</details>
+
+<details class="pub-toggle"><summary>BIB</summary>
+<pre>@inproceedings{mohamed2020mmc,
+  title={MMC-Based Distributed Maximum Power Point Tracking for Photovoltaic Systems},
+  author={Mohamed, F. and Wasti, S. and Afshar, S. and Macedo, P. and Disfani, V.},
+  booktitle={2020 IEEE Power \& Energy Society General Meeting (PESGM)},
+  year={2020},
+  doi={10.1109/PESGM41954.2020.9282015}
+}</pre>
+</details>
+
+</div>
