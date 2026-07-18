@@ -4,7 +4,7 @@ title: false
 author_profile: true
 ---
 
-My work sits at the intersection of electricity markets and power systems engineering. Using tools from operations research and optimization, I study how electricity markets should be designed and priced under uncertainty — work that is grounded in a power systems and power electronics background built during my graduate training in electrical engineering.
+My work sits at the intersection of electricity markets and power systems engineering. Using tools from operations research and optimization, I study how electricity markets should be designed and priced under uncertainty.
 
 <h2>(Real-Time) Electricity Market Design <span class="cluster-tag cluster-tag--current">Current</span></h2>
 
