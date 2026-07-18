@@ -14,7 +14,7 @@ The evolving resource mix increases net-load variability and short-term forecast
 
 For full documentation, see the Energy Market Simulation Framework (EMSF) repository <a href="https://github.com/PowerPSU/EMSF" title="EMSF on GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>, developed by a team in the <a href="https://www.eme.psu.edu/directory/mort-d-webster">Mort Webster</a> group at Penn State (<a href="https://github.com/orgs/PowerPSU/repositories">PowerPSU</a>).
 
-### Publications
+## Publications
 
 <div class="pub-entry" markdown="1">
 
@@ -46,7 +46,7 @@ S. Wasti, A. Retna Kumar, S. Varghese, A. Giacomoni, and M. D. Webster
 
 Microgrids with a high share of distributed energy resources (DER) — rooftop solar, storage, and flexible loads — require coordination among many small, privately-owned agents, where relying on a central coordinator to gather generation and demand data raises both privacy and scalability concerns. My earlier work used distributed optimization methods, building on the Alternating Direction Method of Multipliers (ADMM) and dynamic consensus algorithms, so that agents in a microgrid can jointly solve resource-allocation problems like economic dispatch by communicating only with their neighbors.
 
-### Publications
+## Publications
 
 <div class="pub-entry" markdown="1">
 
@@ -100,11 +100,40 @@ S. Wasti
 
 </div>
 
+<div class="pub-entry" markdown="1">
+
+**Distributed Dynamic Algorithm for Energy Management in Smart Grids.**
+S. Wasti, P. Macedo, S. Afshar, J. Griffin, V. R. Disfani, and P. Siano
+Chapter 12 in *Decentralized Frameworks for Future Power Systems*, Academic Press, 2022, pp. 319–343
+
+<div class="pub-links">
+<a class="pub-btn" href="https://doi.org/10.1016/B978-0-323-91698-1.00008-X" target="_blank" rel="noopener"><i class="fas fa-external-link-alt" aria-hidden="true"></i> ScienceDirect</a>
+</div>
+
+<details class="pub-toggle"><summary>ABS</summary>
+<p>Historically, the electric power grid has been dominated by fossil fuel-based power plants, where a central entity called the energy management system controls and optimizes resources. With the growth of renewable energy sources, distributed algorithms are projected as alternative paradigms to handle large optimization problems given the sheer volume of data and its privacy. This chapter studies the mathematical foundations for different decentralized and distributed algorithms applicable in power systems for convex functions to solve an economic dispatch problem. In the proposed algorithm, each agent updates the time-varying estimate of average power mismatch and the market price via dynamic average consensus in a distributed fashion and finds consensus on those variables. The problem is modeled as a discrete-time linear system, and the stability and convergence of the distributed subgradient algorithm are investigated. Finally, the efficacy of the algorithm is demonstrated in the IEEE 39 bus network.</p>
+</details>
+
+<details class="pub-toggle"><summary>BIB</summary>
+<pre>@incollection{wasti2022distributed,
+  title={Distributed dynamic algorithm for energy management in smart grids},
+  author={Wasti, S. and Macedo, P. and Afshar, S. and Griffin, J. and Disfani, V. R. and Siano, P.},
+  booktitle={Decentralized Frameworks for Future Power Systems},
+  publisher={Academic Press},
+  year={2022},
+  pages={319--343},
+  isbn={9780323916981},
+  doi={10.1016/B978-0-323-91698-1.00008-X}
+}</pre>
+</details>
+
+</div>
+
 ## Power Systems and Power Electronics
 
 The increasing penetration of inverter-based and distributed resources is changing the physical behavior of the grid, from how it responds to disturbances to how energy is captured and converted at the hardware level. My early work explored this challenge from two angles: distributed control algorithms that help maintain system stability without relying on centralized, wide-area communication, and power-electronic converter topologies that improve energy capture and reliability, validated through simulation studies.
 
-### Publications
+## Publications
 
 <div class="pub-entry" markdown="1">
 
