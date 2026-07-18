@@ -4,8 +4,6 @@ title: false
 author_profile: true
 ---
 
-My work sits at the intersection of electricity markets and power systems engineering. Using tools from operations research and optimization, I study how electricity markets should be designed and priced under uncertainty.
-
 <h2>(Real-Time) Electricity Market Design <span class="cluster-tag cluster-tag--current">Current</span></h2>
 
 The evolving resource mix increases net-load variability and short-term forecast uncertainty. System operators face the challenge of managing this cost-effectively and reliably within a merit-order-based market design. I study the management of storage, the incorporation of uncertainty into market simulation models, and the effects on price formation, with practical implications for RTOs/ISOs' operational and market design considerations — especially how merit-order-based dispatch fares when opportunity cost, rather than heat rate and fuel cost, drives price formation.
