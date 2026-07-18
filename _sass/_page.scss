@@ -465,6 +465,28 @@
    Research page: diagrams and publication entries
    ========================================================================== */
 
+.cluster-tag {
+  display: inline-block;
+  margin-left: 10px;
+  padding: 2px 10px;
+  font-size: 0.5em;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-radius: 10px;
+  vertical-align: middle;
+
+  &--current {
+    background: $masthead-link-color;
+    color: #fff;
+  }
+
+  &--prior {
+    background: $lighter-gray;
+    color: $dark-gray;
+  }
+}
+
 .diagram-img {
   display: block;
   max-width: 100%;
