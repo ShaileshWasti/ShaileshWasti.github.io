@@ -44,9 +44,9 @@ S. Wasti, A. Retna Kumar, S. Varghese, A. Giacomoni, and M. D. Webster
 
 </div>
 
-<h2>Power Systems Foundations <span class="cluster-tag cluster-tag--prior">M.S. Research, 2018–2021</span></h2>
+<h2>Earlier Research <span class="cluster-tag cluster-tag--prior">M.S. Research, 2018–2021</span></h2>
 
-Before my PhD, my graduate work at the University of Tennessee at Chattanooga focused on the physical and control layer of the grid: distributed algorithms for coordinating microgrid resources, and power-electronic converter design for renewable integration. This background in power systems and power electronics underpins my current market-design work and reflects a systems-level view spanning both the economic and physical layers of the grid.
+During my M.S., I worked on distributed algorithms for microgrid coordination and power-electronic converter design for renewable integration.
 
 ### Distributed Algorithms for Microgrids
 
