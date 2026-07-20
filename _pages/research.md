@@ -6,7 +6,7 @@ author_profile: true
 
 <h2>(Real-Time) Electricity Market Design <span class="cluster-tag cluster-tag--current">Current</span></h2>
 
-The growing penetration of weather-dependent renewable resources, particularly wind and solar, increases net-load variability and short-term forecast uncertainty. System operators face the challenge of managing this cost-effectively and reliably within a merit-order-based market design. I study the management of storage, the incorporation of uncertainty into market simulation models, and the effects on price formation, with practical implications for RTOs/ISOs' operational and market design considerations — especially how merit-order-based dispatch fares when opportunity cost, rather than heat rate and fuel cost, drives price formation.
+The growing penetration of weather-dependent renewable resources, particularly wind and solar, is increasing net-load variability and short-term forecast uncertainty. System operators face the challenge of managing this cost-effectively and reliably within a merit-order-based market design. I study the management of storage, the incorporation of uncertainty into market simulation models, and the effects on price formation, with practical implications for RTOs/ISOs' operational and market design considerations — especially how merit-order-based dispatch fares when opportunity cost, rather than heat rate and fuel cost, drives price formation.
 
 ### Simulation Framework
 
