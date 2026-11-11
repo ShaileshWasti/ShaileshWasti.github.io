@@ -58,12 +58,11 @@ S. Wasti, A. Retna Kumar, S. Varghese, A. Giacomoni, and M. D. Webster
 
 During my M.S., I worked on distributed algorithms for microgrid coordination and power-electronic converter design for renewable integration.
 
-M.S. Thesis: [Distributed Online Algorithms for Energy Management in Smart Grids](https://scholar.utc.edu/theses/684/), University of Tennessee at Chattanooga, 2020. Advisor: Prof. Vahid R. Disfani.
-
 ### Distributed Algorithms for Microgrids
 
 Microgrids with a high share of distributed energy resources (DER) — rooftop solar, storage, and flexible loads — require coordination among many small, privately-owned agents, where relying on a central coordinator to gather generation and demand data raises both privacy and scalability concerns. My earlier work used distributed optimization methods, building on the Alternating Direction Method of Multipliers (ADMM) and dynamic consensus algorithms, so that agents in a microgrid can jointly solve resource-allocation problems like economic dispatch by communicating only with their neighbors.
 
+- M.S. Thesis: [Distributed Online Algorithms for Energy Management in Smart Grids](https://scholar.utc.edu/theses/684/), University of Tennessee at Chattanooga, 2020. Advisor: Prof. Vahid R. Disfani.
 - S. Wasti, P. Ubiratan, S. Afshar, and V. Disfani, "[Distributed Dynamic Economic Dispatch using Alternating Direction Method of Multipliers](https://www.energy-proceedings.org/distributed-dynamic-economic-dispatch-using-alternating-direction-method-of-multipliers/)," *Applied Energy Symposium: MIT A+B*, August 2020.
 - S. Wasti, P. Macedo, S. Afshar, J. Griffin, V. R. Disfani, and P. Siano, "[Distributed Dynamic Algorithm for Energy Management in Smart Grids](https://doi.org/10.1016/B978-0-323-91698-1.00008-X)," in *Decentralized Frameworks for Future Power Systems*, Academic Press, 2022.
 

@@ -16,4 +16,6 @@ author_profile: true
 
 - S. Wasti, P. Macedo, S. Afshar, J. Griffin, V. R. Disfani, and P. Siano, "[Distributed Dynamic Algorithm for Energy Management in Smart Grids](https://doi.org/10.1016/B978-0-323-91698-1.00008-X)," in *Decentralized Frameworks for Future Power Systems*, Academic Press, 2022.
 
+- S. Wasti, "[Distributed Online Algorithms for Energy Management in Smart Grids](https://scholar.utc.edu/theses/684/)," M.S. thesis, University of Tennessee at Chattanooga, 2020. Advisor: Prof. Vahid R. Disfani.
+
 For a complete list, see my [Google Scholar](https://scholar.google.com/citations?user=5ckMkHkAAAAJ&hl=en&oi=ao) profile.
