@@ -16,9 +16,16 @@ I am a PhD candidate in the [Department of Energy and Mineral Engineering](https
 
 <ul class="news-list">
   <li class="news-row">
+    <div class="news-date">January 2027:</div>
+    <div class="news-content">
+      <span class="text-red">Upcoming</span> — Presenting a poster, <em>"Market Power Mitigation for Energy Storage in Electricity Markets,"</em> at the <a href="https://web.cvent.com/event/d6dcb6c5-dee0-4a22-b782-873001f3fed4/summary">Grid Science Winter School &amp; Conference</a>, Los Alamos National Laboratory (CNLS), Santa Fe, NM.
+    </div>
+  </li>
+
+  <li class="news-row">
     <div class="news-date">November 2026:</div>
     <div class="news-content">
-      <span class="text-red">Upcoming</span> — Presenting <em>"Shortage Pricing for Energy Storage State-of-Charge Management in Real-Time Markets"</em> at the <a href="https://meetings.informs.org/wordpress/annual/">INFORMS Annual Meeting</a>, session: <em>Advances in Electricity Market Design and Operations</em>.
+      Presented <em>"Shortage Pricing for Energy Storage State-of-Charge Management in Real-Time Markets"</em> at the <a href="https://meetings.informs.org/wordpress/annual/">INFORMS Annual Meeting</a>, session: <em>Advances in Electricity Market Design and Operations</em>.
     </div>
   </li>
   
