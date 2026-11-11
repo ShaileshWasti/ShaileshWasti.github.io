@@ -18,6 +18,18 @@ For full documentation, see the Energy Market Simulation Framework (EMSF) reposi
 
 <div class="pub-entry" markdown="1">
 
+**Scarcity Pricing for State-of-Charge Management in Real-Time Markets Under Intra-Day Uncertainty.**
+S. Wasti, A. Retna Kumar, S. Varghese, A. Giacomoni, P. Alivand, Y. Hu, and M. D. Webster
+*IEEE Transactions on Energy Markets, Policy and Regulation*, under review
+
+<div class="pub-links">
+<a class="pub-btn" href="https://arxiv.org/abs/2611.11730" target="_blank" rel="noopener"><i class="fas fa-external-link-alt" aria-hidden="true"></i> arXiv</a>
+</div>
+
+</div>
+
+<div class="pub-entry" markdown="1">
+
 **Energy Storage State-of-Charge Management in Real-Time Markets.**
 S. Wasti, A. Retna Kumar, S. Varghese, A. Giacomoni, and M. D. Webster
 *2025 IEEE Power & Energy Society General Meeting (PESGM)*, July 27–31, 2025

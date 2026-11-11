@@ -4,6 +4,8 @@ title: false
 author_profile: true
 ---
 
+- S. Wasti, A. Retna Kumar, S. Varghese, A. Giacomoni, P. Alivand, Y. Hu, and M. D. Webster, "[Scarcity Pricing for State-of-Charge Management in Real-Time Markets Under Intra-Day Uncertainty](https://arxiv.org/abs/2611.11730)," *IEEE Transactions on Energy Markets, Policy and Regulation*, under review. arXiv:2611.11730.
+
 - S. Wasti, A. Retna Kumar, S. Varghese, A. Giacomoni, and M. D. Webster, "[Energy Storage State-of-Charge Management in Real-Time Markets](https://ieeexplore.ieee.org/abstract/document/11225837)," *IEEE PES General Meeting*, July 2025.
 
 - P. Macedo, S. Wasti, and V. Disfani, "[Distributed Inter-Area Oscillation Damping Control via Dynamic Average Consensus Algorithm](https://doi.org/10.1109/SmartGridComm47815.2020.9302945)," *IEEE SmartGridComm*, November 2020.
