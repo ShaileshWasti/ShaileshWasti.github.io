@@ -10,6 +10,8 @@ redirect_from:
 I am a PhD candidate in the [Department of Energy and Mineral Engineering](https://www.eme.psu.edu/) at the [Pennsylvania State University](https://www.psu.edu/), with a focus in Energy Systems Engineering, working under the supervision of [Prof. Mort Webster](https://www.eme.psu.edu/directory/mort-d-webster), with a minor in [Operations Research](https://www.or.psu.edu/). My research focuses on the design and operation of wholesale electricity markets under uncertainty, with particular emphasis on energy storage, price formation, and real-time market design. This work is conducted in ongoing collaboration with *PJM Interconnection* and *ISO New England*. In Summer 2024, I completed a research internship with PJM's Advanced Analytics group under the guidance of [Anthony Giacomoni](https://www.linkedin.com/in/anthonygiacomoni). I hold an M.S. in [Electrical Engineering (Power & Energy)](https://www.utc.edu/engineering-and-computer-science/academic-programs/electrical-engineering/electrical-engineering-graduate-program) from the [University of Tennessee at Chattanooga](https://www.utc.edu/), where I was advised by [Prof. Vahid Disfani](https://www.utc.edu/directory/czd631-college-of-engineering-and-computer-science-vahid-rasouli-disfani/czd631).
 
 
+<p><span class="text-red"><strong>On the job market 2026–2027:</strong></span> I am seeking postdoctoral and research positions.</p>
+
 ## News
 
 <div class="news-scroll-box" markdown="1">

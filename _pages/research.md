@@ -58,6 +58,8 @@ S. Wasti, A. Retna Kumar, S. Varghese, A. Giacomoni, and M. D. Webster
 
 During my M.S., I worked on distributed algorithms for microgrid coordination and power-electronic converter design for renewable integration.
 
+M.S. Thesis: [Distributed Online Algorithms for Energy Management in Smart Grids](https://scholar.utc.edu/theses/684/), University of Tennessee at Chattanooga, 2020. Advisor: Prof. Vahid R. Disfani.
+
 ### Distributed Algorithms for Microgrids
 
 Microgrids with a high share of distributed energy resources (DER) — rooftop solar, storage, and flexible loads — require coordination among many small, privately-owned agents, where relying on a central coordinator to gather generation and demand data raises both privacy and scalability concerns. My earlier work used distributed optimization methods, building on the Alternating Direction Method of Multipliers (ADMM) and dynamic consensus algorithms, so that agents in a microgrid can jointly solve resource-allocation problems like economic dispatch by communicating only with their neighbors.
